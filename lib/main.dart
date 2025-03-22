@@ -21,8 +21,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.yellow,
+          accentColor: Colors.black,
+        ),
+        textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.black)),
+        textSelectionTheme: TextSelectionThemeData(
+          cursorColor: Colors.black,
+          selectionColor: Colors.blue[100],
+          selectionHandleColor: Colors.black,
+        ),
+      ),
       home: HomePage(),
-      theme: ThemeData(primarySwatch: Colors.yellow),
     );
   }
 }
